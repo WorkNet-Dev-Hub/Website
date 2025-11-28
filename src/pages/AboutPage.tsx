@@ -72,8 +72,8 @@ const AboutPage: React.FC = () => {
                 <div className={`mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full ${value.bgColor}`}>
                   <value.icon className={`h-8 w-8 ${value.color}`} />
                 </div>
-                <h3 className="mb-3 text-lg font-semibold text-gray-900">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900"></h3>
+                <p className="text-gray-600"></p>
               </motion.div>
             ))}
           </div>
