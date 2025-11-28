@@ -8,8 +8,11 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+<<<<<<< HEAD
 dist-ssr
 *.local
+=======
+>>>>>>> 580f0279c366764c535f3838a96821d383c2ae3a
 
 # Editor directories and files
 .vscode/*
