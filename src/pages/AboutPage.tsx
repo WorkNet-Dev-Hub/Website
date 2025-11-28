@@ -169,8 +169,8 @@ const AboutPage: React.FC = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-gray-600">Organizations Served</div>
+                  <div className="text-2xl font-bold text-primary"></div>
+                  <div className="text-sm text-gray-600"></div>
                 </div>
               </div>
             </motion.div>
