@@ -1,0 +1,111 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#4F46E5',
+          50: '#F1F0FE',
+          100: '#E2E1FD',
+          200: '#C5C3FB',
+          300: '#A8A5F9',
+          400: '#8B87F7',
+          500: '#4F46E5',
+          600: '#2D23E0',
+          700: '#1F16B8',
+          800: '#171090',
+          900: '#0F0A68',
+          950: '#0B074D',
+        },
+        secondary: {
+          DEFAULT: '#10B981',
+          50: '#ECFDF5',
+          100: '#D1FAE5',
+          200: '#A7F3D0',
+          300: '#6EE7B7',
+          400: '#34D399',
+          500: '#10B981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065F46',
+          900: '#064E3B',
+          950: '#022C22',
+        },
+        accent: {
+          DEFAULT: '#F59E0B',
+          50: '#FEF3C7',
+          100: '#FDE68A',
+          200: '#FCD34D',
+          300: '#FBBF24',
+          400: '#F59E0B',
+          500: '#D97706',
+          600: '#B45309',
+          700: '#92400E',
+          800: '#78350F',
+          900: '#451A03',
+          950: '#2E1103',
+        },
+      },
+      fontFamily: {
+        sans: [
+          'SF Pro Display',
+          'SF Pro',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+        ],
+      },
+      boxShadow: {
+        'inner-light': 'inset 0 1px 2px rgba(0, 0, 0, 0.05)',
+        neon: '0 0 10px rgba(79, 70, 229, 0.5), 0 0 20px rgba(79, 70, 229, 0.3), 0 0 30px rgba(79, 70, 229, 0.1)',
+        'neon-teal': '0 0 10px rgba(16, 185, 129, 0.5), 0 0 20px rgba(16, 185, 129, 0.3), 0 0 30px rgba(16, 185, 129, 0.1)',
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'slide-down': 'slideDown 0.6s ease-out',
+        'slide-left': 'slideLeft 0.6s ease-out',
+        'slide-right': 'slideRight 0.6s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'bounce-slow': 'bounce 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-20px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+        slideLeft: {
+          '0%': { transform: 'translateX(20px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        slideRight: {
+          '0%': { transform: 'translateX(-20px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
+      backgroundImage: {
+        'grid-pattern': 'linear-gradient(to right, rgba(79, 70, 229, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(79, 70, 229, 0.1) 1px, transparent 1px)',
+        'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
+      },
+    },
+  },
+  plugins: [],
+};
