@@ -162,21 +162,6 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <img 
-                src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="WorkNET team collaboration"
-                className="rounded-2xl shadow-lg"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary"></div>
-                  <div className="text-sm text-gray-600"></div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       <CallToAction />
     </div>
