@@ -68,10 +68,13 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <a href="/contact" className="btn btn-primary">
-                Request Demo <ArrowRight className="ml-2 h-5 w-5" />
+              <a 
+                href="https://worknet-dev-hub.github.io/dashboard/"
+              target="_blank" 
+                className="btn btn-primary">
+                See Demo <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <Link to="/about" className="btn btn-outline border-white text-white hover:bg-white/10">
+              
                 Learn More
               </Link>
             </div>
