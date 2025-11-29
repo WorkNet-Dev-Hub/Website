@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <a 
                 href="https://worknet-dev-hub.github.io/dashboard/"
-              target="_blank" 
+                target="_blank" 
                 className="btn btn-primary">
                 See Demo <ArrowRight className="ml-2 h-5 w-5" />
               </a>
