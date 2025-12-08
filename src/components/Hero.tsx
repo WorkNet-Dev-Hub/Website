@@ -74,7 +74,9 @@ const Hero: React.FC = () => {
                 className="btn btn-primary">
                 See Demo <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              
+              <Link
+                to="/"
+                className="btn btn-secondary">
                 Learn More
               </Link>
             </div>
