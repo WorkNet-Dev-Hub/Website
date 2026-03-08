@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+    font-feature-settings: "ss01", "ss03";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .custom-cursor {
+    @apply pointer-events-none fixed z-50 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#4F46E5] opacity-100 blur-3xl;
+    mix-blend-mode: multiply;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-600 focus:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-600 focus:ring-secondary;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 bg-transparent text-gray-900 hover:bg-gray-50 focus:ring-gray-500;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-600 focus:ring-accent;
+  }
+  
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .title-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .card {
+    @apply overflow-hidden rounded-xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .gradient-border {
+    @apply relative rounded-xl before:absolute before:-z-10 before:h-full before:w-full before:rounded-xl before:bg-gradient-to-r before:from-primary before:to-secondary before:p-0.5 before:content-[''];
+  }
+
+  .grid-bg {
+    @apply relative overflow-hidden;
+  }
+
+  .grid-bg:before {
+    content: '';
+    @apply absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5;
+  }
+
+  .section-transition {
+    @apply transition-all duration-700 ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .section-transition.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Animations */
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reveal-text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.reveal-text.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  background-image: linear-gradient(-45deg, #ffffff 0%, #f7f7f7 25%, #ffffff 51%, #f7f7f7 100%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Intersection Observer Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.scale-up {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-up.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
