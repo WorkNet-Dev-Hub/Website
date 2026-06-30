@@ -229,16 +229,21 @@ const HowItWorksPage: React.FC = () => {
                   <p className="mb-6">
                     Transform your organization's digital infrastructure with WorkNET. Our team is ready to guide you through the implementation process.
                   </p>
-                  <a href="/contact" className="inline-flex items-center rounded-lg bg-white px-6 py-3 font-semibold text-primary transition-all hover:bg-gray-100">
-                    Contact Us <ArrowRight className="ml-2 h-5 w-5" />
+            <Link 
+              to="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
                   </a>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="text-center">
-                    <div className="mb-2 text-4xl font-bold">15+</div>
-                    <p className="text-white/90">Years of Experience</p>
-                    <div className="mb-2 mt-6 text-4xl font-bold">1000+</div>
-                    <p className="text-white/90">Successful Implementations</p>
+                    <div className="mb-2 text-4xl font-bold"></div>
+                    <p className="text-white/90"></p>
+                    <div className="mb-2 mt-6 text-4xl font-bold"></div>
+                    <p className="text-white/90"></p>
                   </div>
                 </div>
               </div>
