@@ -8,10 +8,8 @@ import FeaturesPage from './pages/FeaturesPage';
 import HowItWorksPage from './pages/HowItWorksPage';
 import SurveyPage from './pages/SurveyPage';
 import ContactPage from './pages/ContactPage';
-import SecurityPage from './pages/SecurityPage';
 import SupportPage from './pages/SupportPage';
 import LegalPage from './pages/LegalPage';
-import RoadmapPage from './pages/RoadmapPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import PricingPage from './pages/PricingPage';
 
