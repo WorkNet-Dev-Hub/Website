@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../components/About';
+import CallToAction from '../components/CallToAction';
 import { motion } from 'framer-motion';
 import { Target, Users, Globe, Award, TrendingUp, Heart } from 'lucide-react';
 
@@ -27,12 +28,6 @@ const AboutPage: React.FC = () => {
     }
   ];
 
-  const stats = [
-    { number: "2019", label: "Founded" },
-    { number: "200+", label: "Team Members" },
-    { number: "50+", label: "Countries Served" },
-    { number: "99.9%", label: "Uptime SLA" }
-  ];
 
   return (
     <div className="pt-24">
@@ -77,8 +72,8 @@ const AboutPage: React.FC = () => {
                 <div className={`mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full ${value.bgColor}`}>
                   <value.icon className={`h-8 w-8 ${value.color}`} />
                 </div>
-                <h3 className="mb-3 text-lg font-semibold text-gray-900">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900"></h3>
+                <p className="text-gray-600"></p>
               </motion.div>
             ))}
           </div>
@@ -173,7 +168,7 @@ const AboutPage: React.FC = () => {
                 className="rounded-2xl shadow-lg"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
-                 <div className="text-center">
+                <div className="text-center">
                   <div className="text-2xl font-bold text-primary"></div>
                   <div className="text-sm text-gray-600"></div>
                 </div>
@@ -182,6 +177,8 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <CallToAction />
     </div>
   );
 };

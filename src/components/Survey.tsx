@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { CheckCircle, ArrowRight, ClipboardList } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const Survey: React.FC = () => {
   const [ref, inView] = useInView({

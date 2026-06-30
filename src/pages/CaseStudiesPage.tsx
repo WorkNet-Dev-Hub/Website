@@ -73,7 +73,7 @@ const CaseStudiesPage: React.FC = () => {
               Real Results with <span className="text-secondary">WorkNET</span>
             </h1>
             <p className="mb-8 text-lg text-gray-600">
-              Discover how organizations across sectors have transformed their operations and achieved measurable results with similar systems.
+              Discover how organizations across sectors have transformed their operations and achieved measurable results with WorkNET.
             </p>
           </motion.div>
 

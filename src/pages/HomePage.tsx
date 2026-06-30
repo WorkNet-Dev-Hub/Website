@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Zap, Shield, TrendingUp, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Zap, Shield, TrendingUp, CheckCircle } from 'lucide-react';
 import Hero from '../components/Hero';
 
 const HomePage: React.FC = () => {
@@ -213,13 +212,13 @@ const HomePage: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
+            <a 
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
             >
               Contact
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
             <a 
               href="https://worknet-dev-hub.github.io/dashboard/"
               target="_blank"

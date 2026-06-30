@@ -61,20 +61,22 @@ const Hero: React.FC = () => {
               Revolutionizing Digital Infrastructure
             </span>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              The <span className="text-white">Digital Highway</span> for Modern Work
+              The <span className="title-gradient">Digital Highway</span> for Modern Work
             </h1>
             <p className="mb-8 max-w-2xl text-lg text-gray-300">
               Transform the working life with a modernised infrastructure that connects people, businesses, drives innovation and builds the future of digital innovation.
             </p>
             
- <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4">
               <a 
                 href="https://worknet-dev-hub.github.io/dashboard/"
                 target="_blank" 
                 className="btn btn-primary">
                 See Demo <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-                 <Link to="/about" className="btn btn-outline border-white text-white hover:bg-white/10">
+              <Link
+                to="/"
+                className="btn btn-secondary">
                 Learn More
               </Link>
             </div>

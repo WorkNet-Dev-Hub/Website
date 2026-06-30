@@ -1,16 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useForm, ValidationError } from '@formspree/react';
 import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-  const [formRef, formInView] = useInView({
+  const [formRef] = useInView({
     triggerOnce: false,
     threshold: 0.1,
   });
-
-  const [state, handleSubmit] = useForm("mreewlgg");
 
   return (
     <div className="pt-24">
@@ -98,6 +95,18 @@ const ContactPage: React.FC = () => {
                   </motion.div>
                 </div>
 
+                <motion.div
+                  className="mt-12 rounded-xl bg-gradient-to-r from-primary to-secondary p-8 text-white"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                >
+                  <h3 className="mb-4 text-2xl font-bold">Ready to Get Started?</h3>
+                  <p className="mb-6">Schedule a meetting or send a message and discover how WorkNET can transform work forever.</p>
+             
+
+                 
+                </motion.div>
               </motion.div>
 
               {/* Contact Form */}
@@ -109,7 +118,7 @@ const ContactPage: React.FC = () => {
                 className="rounded-2xl bg-white p-8 shadow-xl ring-1 ring-gray-200"
               >
                 <h2 className="mb-8 text-2xl font-bold text-gray-900">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form className="space-y-6">
                   <div className="grid gap-6 md:grid-cols-2">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
@@ -118,10 +127,8 @@ const ContactPage: React.FC = () => {
                       <input
                         type="text"
                         id="firstName"
-                        name="firstName"
                         className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                       />
-                      <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
@@ -130,10 +137,8 @@ const ContactPage: React.FC = () => {
                       <input
                         type="text"
                         id="lastName"
-                        name="lastName"
                         className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                       />
-                      <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
                     </div>
                   </div>
 
@@ -144,11 +149,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="email"
                       id="email"
-                      name="email"
-                      required
                       className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     />
-                    <ValidationError prefix="Email" field="email" errors={state.errors} />
                   </div>
 
                   <div>
@@ -158,10 +160,8 @@ const ContactPage: React.FC = () => {
                     <input
                       type="text"
                       id="organization"
-                      name="organization"
                       className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     />
-                    <ValidationError prefix="Organization" field="organization" errors={state.errors} />
                   </div>
 
                   <div>
@@ -170,27 +170,18 @@ const ContactPage: React.FC = () => {
                     </label>
                     <textarea
                       id="message"
-                      name="message"
                       rows={4}
-                      required
                       className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     ></textarea>
-                    <ValidationError prefix="Message" field="message" errors={state.errors} />
                   </div>
-
-                  {state.succeeded && (
-                    <div className="rounded-lg bg-green-50 p-4">
-                      <p className="text-green-800">Thanks for your message! We'll get back to you soon.</p>
-                    </div>
-                  )}
 
                   <button
                     type="submit"
-                    disabled={state.submitting}
-                    className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-white transition-all hover:bg-primary-600 disabled:opacity-50"
+                    className="flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-white transition-all hover:bg-primary-600"
                   >
-                    {state.submitting ? 'Sending...' : 'Send Message'} 
-                    {!state.submitting && <ArrowRight className="ml-2 h-5 w-5" />}
+                       <a href="jaketghill@gmail.com" className="btn btn-primary">
+  Send message <ArrowRight className="ml-2 h-5 w-5" />
+</a>
                   </button>
                 </form>
               </motion.div>
@@ -198,6 +189,9 @@ const ContactPage: React.FC = () => {
           </div>
         </motion.div>
 
+        {/* Decorative Elements */}
+        <div className="pointer-events-none absolute left-0 top-0 -z-10 h-96 w-96 rounded-full bg-primary opacity-5 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-0 right-0 -z-10 h-96 w-96 rounded-full bg-secondary opacity-5 blur-3xl"></div>
       </section>
     </div>
   );

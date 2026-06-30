@@ -85,7 +85,7 @@ const LegalPage: React.FC = () => {
                 While WorkNET is committed to maintaining the highest standards of legal compliance and data protection, this page is currently in progress.
                 
                 All services are designed to meet federal, state, and local regulatory requirements. For specific 
-                compliance questions or legal inquiries, please contact us.
+                compliance questions or legal inquiries, please contact our us.
               </p>
             </div>
           </motion.div>

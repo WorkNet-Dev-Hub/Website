@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Users, Building, Globe, ArrowRight, Info } from 'lucide-react';
+import { CheckCircle, Users, Building, Globe, Info } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const features = [

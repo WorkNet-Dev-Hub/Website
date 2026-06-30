@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 
 interface CaseStudyProps {
@@ -111,7 +110,7 @@ const Showcase: React.FC = () => {
             See WorkNET in <span className="title-gradient">Action</span>
           </h2>
           <p className="text-text-secondary">
-            Discover how organizations across industries are leveraging systems like WorkNET to transform their digital infrastructure and improve operational efficiency.
+            Discover how organizations across industries are leveraging WorkNET to transform their digital infrastructure and improve operational efficiency.
           </p>
         </motion.div>
         
@@ -127,14 +126,13 @@ const Showcase: React.FC = () => {
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, threshold: 0.1 }}
+          animate={titleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 text-center"
         >
-          <Link to="/case-studies" className="btn btn-outline">
+          <a href="/case-studies" className="btn btn-outline">
             View All Case Studies
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
